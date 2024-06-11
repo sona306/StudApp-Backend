@@ -6,15 +6,19 @@ const students = require("./models/student")
 const app = express()
 app.use(cors())
 
-app.get("/",(req,res)=>{
+app.post("/view",(req,res)=>{
     res.send("hello")
 })
 
-app.post("/contact",(req,res)=>{
+app.post("/search",(req,res)=>{
     res.send("contact page")
 })
 
-app.listen(8080,()=>{
+app.post("/delete",(req,res)=>{
+    res.send("contact page")
+})
+
+app.listen(8081,()=>{
     console.log("server started")
 })
 
